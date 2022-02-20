@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="33.3">
+
+
+        <NumberPicker
+            android:id="@+id/numberPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="200dp"
+            app:layout_constraintBottom_toTopOf="@+id/buyBtn"
+            app:layout_constraintEnd_toStartOf="@+id/totalPrice"
+            app:layout_constraintHorizontal_bias="0.727"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/managerBtn"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/selectedName"
+            android:layout_width="131dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="80dp"
+            android:text="Product Type"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/managerBtn"
+            app:layout_constraintHorizontal_bias="0.428"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/managerBtn"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="350dp"
+            android:layout_marginTop="150dp"
+            android:backgroundTint="#3FD6D6"
+            android:text="MANAGER"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/buyBtn"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="150dp"
+            android:backgroundTint="#3FD6D6"
+            android:text="BUY"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/managerBtn"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/managerBtn"
+            app:layout_constraintTop_toBottomOf="@+id/managerBtn"
+            app:layout_constraintVertical_bias="0.0"
+            app:rippleColor="#020202" />
+
+        <TextView
+            android:id="@+id/totalPrice"
+            android:layout_width="0dp"
+            android:layout_height="29dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/buyBtn"
+            app:layout_constraintEnd_toEndOf="@+id/managerBtn"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/managerBtn"
+            app:layout_constraintTop_toBottomOf="@+id/managerBtn"
+            app:layout_constraintVertical_bias="0.512" />
+
+        <TextView
+            android:id="@+id/selectedQty"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="39dp"
+            android:text="Quantity"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/buyBtn"
+            app:layout_constraintEnd_toEndOf="@+id/numberPicker"
+            app:layout_constraintStart_toStartOf="@+id/numberPicker"
+            app:layout_constraintTop_toBottomOf="@+id/numberPicker"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ListView
+        android:id="@+id/productListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="66.6"
+        android:layout_below="@id/view1" />
+
+</RelativeLayout>

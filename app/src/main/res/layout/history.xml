@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="100">
+
+
+    <LinearLayout
+        android:id="@+id/history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="33.3"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/historyName"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:text="product"
+            android:textAlignment="textStart"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/historyPrice"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/productName"
+            android:layout_marginLeft="10dp"
+            android:text="price"
+            android:textAlignment="textStart"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/historyQty"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_weight="66.6"
+        android:text="qty"
+        android:textAlignment="textStart"
+        android:textSize="20sp" />
+
+</LinearLayout>
+
+
+
